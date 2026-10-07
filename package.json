@@ -1,0 +1,35 @@
+{
+  "name": "pi-sandbox",
+  "version": "0.1.0",
+  "description": "OS-level sandbox for Pi's bash tool, with path guards for its file tools.",
+  "license": "MIT",
+  "author": "ahalekelly",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahalekelly/pi-sandbox.git"
+  },
+  "keywords": ["pi-package"],
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "pi": {
+    "extensions": ["./src/index.ts"]
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sandbox-runtime": "^0.0.67"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.0.4",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
